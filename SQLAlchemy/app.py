@@ -80,7 +80,7 @@ def tobs():
 
     last_twelve_months = dt.datetime.strptime(latest_date, '%Y-%m-%d') - dt.timedelta(days=365) 
 
-    lastyear = session.query(Measurement.date, Measurement.tobs).\
+    lastyear = session.query(Measurement.date, func.avg(Measurement.tobs)).\
                 filter(Measurement.date >= last_twelve_months).\
                 group_by(Measurement.date).\
                 order_by(Measurement.date).all()
