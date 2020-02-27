@@ -25,6 +25,12 @@
 
 * Calculate the rainfall per weather station using the previous year's matching dates.
 
-* Calculate the daily normals. Normals are the averages for the min, avg, and max temperatures.
+* Calculate the daily normals.
 
 ![](SQLAlchemy/Images/Predicted%20Temps.png)
+
+# Create an APP
+
+* Used Flask to create routes to present data (Jsonfify)
+
+* Created a UI for users to input a start and end date into the url to obtain Average Temperature, and Min/Max Temperatures between the two dates.
